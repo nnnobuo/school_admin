@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+ruby 2.5.0
 
-* System dependencies
 
-* Configuration
+* Database
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id      |integer|null: false, foreign_key: true|
+|name    |string |null: false|
+|email   |string |null: false, add_index unique: true|
+|password|string |null: false|
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Studentsテーブル
+<!-- sex,school_year等のintegerにしているののちにenumでデータを保存するため -->
+|Column|Type|Options|
+|------|----|-------|
+|id             |integer|null: false|
+|name           |string |
+|sex            |integer|null: false|
+|school_year    |integer|null: false|
+|school_class   |integer|null: false|
+|lesson_content |integer|null: false|
+|note           |string |null: false|
